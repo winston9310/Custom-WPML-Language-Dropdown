@@ -32,14 +32,14 @@ function custom_horizontal_language_list() {
         $current = 1;
         
         foreach ($languages as $code => $language) {
-            // idioma es el actual en negrita
+            // bold selected lenguage
             if ($language['active']) {
                 $output .= '<strong>' . strtoupper($language['language_code']) . '</strong>';
             } else {
                 $output .= '<a href="' . $language['url'] . '">' . strtoupper($language['language_code']) . '</a>';
             }
             
-            // Agregar el separador "|" si no es el último idioma
+            // Add separator "|" 
             if ($current < $total_languages) {
                 $output .= ' | ';
             }
